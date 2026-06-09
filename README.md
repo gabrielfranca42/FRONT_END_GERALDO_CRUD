@@ -1,91 +1,29 @@
-# 📱 Biblioteca App — React Native com Expo
+# Gerenciador de Livros (Mobile)
 
-Aplicativo mobile para gerenciamento de livros (CRUD completo), desenvolvido com **React Native** e **Expo**, consumindo uma API REST.
+Aplicativo mobile desenvolvido em React Native com Expo para realizar o gerenciamento de livros consumindo a API construída no backend.
 
-## 🛠️ Tecnologias
+## Funcionalidades
+- Visualização de livros cadastrados com interface premium.
+- Adição, edição e exclusão de livros.
+- Indicação de leitura e informações de publicação.
+- Swipe para atualizar a lista (Pull-to-refresh).
 
-- **React Native** — Framework mobile multiplataforma
-- **Expo** — Plataforma de desenvolvimento
-- **React Navigation** — Navegação entre telas
-- **Axios** — Cliente HTTP para consumo da API
-- **@expo/vector-icons** — Ícones (Ionicons)
+## Tecnologias
+- React Native
+- Expo (SDK 54)
+- React Navigation
+- Axios
+- Vector Icons
 
-## 📁 Estrutura do Projeto
+## Como executar
+1. Instale as dependências: `npm install`
+2. Inicie o servidor do Expo: `npx expo start`
+3. Leia o QR Code no seu aplicativo Expo Go do celular.
 
-```
-mobile/
-├── src/
-│   ├── constants/
-│   │   └── theme.js         # Cores, fontes, espaçamentos
-│   ├── screens/
-│   │   ├── HomeScreen.js     # Lista de livros
-│   │   ├── FormScreen.js     # Cadastro / Edição
-│   │   └── DetailScreen.js   # Detalhes do livro
-│   └── services/
-│       └── api.js            # Configuração do Axios
-├── App.js                    # Ponto de entrada + Navegação
-├── package.json
-└── README.md
-```
+### URL de Conexão Expo
+Se necessário conectar diretamente, utilize a seguinte URL no Expo Go:
+exp://192.168.1.8:8081
 
-## 📲 Funcionalidades
-
-- ✅ **Listar** todos os livros cadastrados
-- ✅ **Cadastrar** novo livro com validação
-- ✅ **Editar** livro existente
-- ✅ **Excluir** livro com confirmação
-- ✅ **Visualizar** detalhes completos
-- ✅ **Pull-to-refresh** para atualizar a lista
-- ✅ **Indicador de leitura** (lido / não lido)
-- ✅ **Interface dark mode** com design premium
-
-## 🚀 Instalação e Execução
-
-### Pré-requisitos
-
-- Node.js 18+
-- Expo CLI (`npx expo`)
-- Expo Go no celular (Android/iOS)
-
-### Passos
-
-1. Clone o repositório:
-
-```bash
-git clone <url-do-repositorio>
-cd mobile
-```
-
-2. Instale as dependências:
-
-```bash
-npm install
-```
-
-3. Configure a URL da API em `src/services/api.js`:
-
-```javascript
-// Para desenvolvimento local (substitua pelo IP da sua máquina):
-const API_URL = 'http://192.168.X.X:3000/api';
-
-// Para produção (Render):
-const API_URL = 'https://livros-api.onrender.com/api';
-```
-
-4. Inicie o projeto:
-
-```bash
-npx expo start
-```
-
-5. Escaneie o QR Code com o **Expo Go** no celular.
-
-## 🔗 Backend
-
-A API utilizada por este app está disponível em:
-- Repositório: `../backend`
-- Documentação das rotas: consulte o README do backend
-
-## 📄 Licença
-
-MIT
+### Integração com a API
+O aplicativo está configurado para acessar a API na URL de produção:
+https://back-end-geraldo-crud.onrender.com/api
